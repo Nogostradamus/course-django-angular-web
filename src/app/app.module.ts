@@ -5,11 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AuthModule } from './auth/auth.module';
 import { MainModule } from './main/main.module';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'movies'}
+  {path: '', pathMatch: 'full', redirectTo: 'auth'}
 ];
 
 @NgModule({
@@ -18,6 +19,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    AngularFontAwesomeModule,
     AuthModule,
     MainModule,
     HttpClientModule,
