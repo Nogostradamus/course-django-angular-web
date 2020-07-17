@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AuthModule } from './auth/auth.module';
 import { MainModule } from './main/main.module';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'auth'}
@@ -19,11 +20,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AngularFontAwesomeModule,
     AuthModule,
     MainModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FontAwesomeModule
   ],
   exports: [
     RouterModule

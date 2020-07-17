@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from '../../models/Movie';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -13,6 +16,9 @@ export class MovieListComponent implements OnInit {
   @Output() editedMovie = new EventEmitter<Movie>();
   @Output() createNewMovie = new EventEmitter();
   @Output() deletedMovie = new EventEmitter<Movie>();
+
+  faEdit = faEdit;
+  faTrash = faTrash;
 
   constructor() { }
 

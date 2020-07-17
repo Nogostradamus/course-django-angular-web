@@ -1,19 +1,19 @@
 <div *ngIf="movie">
   <h1>{{ movie.title }}</h1>
-  <fa name="star" [ngClass]="{'orange': movie.avg_rating > 0}"></fa>
-  <fa name="star" [ngClass]="{'orange': movie.avg_rating > 1}"></fa>
-  <fa name="star" [ngClass]="{'orange': movie.avg_rating > 2}"></fa>
-  <fa name="star" [ngClass]="{'orange': movie.avg_rating > 3}"></fa>
-  <fa name="star" [ngClass]="{'orange': movie.avg_rating > 4}"></fa>
+  <fa-icon [icon]="faStar" [ngClass]="{'orange': movie.avg_rating > 0}"></fa-icon>
+  <fa-icon [icon]="faStar" [ngClass]="{'orange': movie.avg_rating > 1}"></fa-icon>
+  <fa-icon [icon]="faStar" [ngClass]="{'orange': movie.avg_rating > 2}"></fa-icon>
+  <fa-icon [icon]="faStar" [ngClass]="{'orange': movie.avg_rating > 3}"></fa-icon>
+  <fa-icon [icon]="faStar" [ngClass]="{'orange': movie.avg_rating > 4}"></fa-icon>
   ({{movie.no_of_ratings}})
   <p>{{ movie.description }}</p>
 
   <div id="rate-container">
     <h2>Rate it !!!</h2>
-    <fa *ngFor="let rate of [1,2,3,4,5]" name="star" (mouseenter)="rateHover(rate)"
+    <fa-icon [icon]="faStar" *ngFor="let rate of [1,2,3,4,5]" (mouseenter)="rateHover(rate)"
     (mouseleave)="rateHovered = 0" (click)="rateClicked(rate)"
     [ngClass]="{'purple': rateHovered >= rate}"
-    ></fa>
+    ></fa-icon>
   </div>
 
    

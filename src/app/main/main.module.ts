@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../api.service';
 
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MainComponent } from './main.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule,
+    FontAwesomeModule,
     RouterModule.forChild(routes)
   ],
   exports: [
